@@ -1,0 +1,17 @@
+{
+    "name": "Typefast",
+    "description": "A bot that automatically types in text on typing sites such as typeracer",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "run_at": "document_idle",
+        "js": ["typefast.js"]
+    }
+    ],
+    "permissions": ["storage", "scripting"],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
